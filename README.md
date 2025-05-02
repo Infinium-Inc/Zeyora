@@ -17,3 +17,19 @@ fastapi dev backend/app
 > [!NOTE]
 > The API will be running on [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/).
 With the documentation at [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs)
+
+## Frontend
+
+### Build
+To build the frontend, use,
+```bash
+cd Frontend
+npm install
+```
+
+### Run
+To start the website, use,
+```bash
+cd Frontend
+npm run dev
+```
