@@ -17,14 +17,14 @@
 
 # Admin Endpoints
 ## Users
-- view users (GET /users) [ADMIN]
-- view user history (GET /users/history) [ADMIN]
+- view users (GET /admin/users) [ADMIN]
+- view user history (GET /admin/users/history) [ADMIN]
 
 ## Items
-- add item (POST /items) [ADMIN]
-- delete item (DELETE /items/{id}) [ADMIN]
-- update item (PUT /items/{id}) [ADMIN]
+- add item (POST /admin/items) [ADMIN]
+- delete item (DELETE /admin/items/{id}) [ADMIN]
+- update item (PUT /admin/items/{id}) [ADMIN]
 
 ## Orders
-- view orders (GET /orders) [ADMIN]
-- update order (PATCH /orders/{id}) [ADMIN]
+- view orders (GET /admin/orders) [ADMIN]
+- update order (PATCH /admin/orders/{id}) [ADMIN]
