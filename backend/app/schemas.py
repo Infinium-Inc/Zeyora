@@ -1,0 +1,19 @@
+from pydantic import BaseModel, EmailStr, model_validator
+
+from datetime import datetime
+from typing import Optional
+
+class UserBase(BaseModel):
+    name: str
+    email: Optional[EmailStr] = None
+    mobile: Optional[str] = None
+
+class UserCreate(UserBase):
+    password: str
+
+class UserResponse(UserBase):
+    id: int
+    created_at: datetime
+
+    class config:
+        orm_mode = True
