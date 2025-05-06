@@ -28,3 +28,15 @@ async def create_user(user: schemas.UserCreate, db: Session = Depends(getDB)):
     db.refresh(db_user)
 
     return db_user
+
+@router.get("/{id}", response_model=schemas.UserResponse)
+async def get_user(id: int, db: Session = Depends(getDB)):  
+    db_user = db.query(models.User).filter(models.User.id == id).first()
+
+    if db_user is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, 
+            detail="Unextistant User"
+        )
+
+    return db_user
