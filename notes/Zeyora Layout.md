@@ -9,19 +9,29 @@ To create a user, send a `POST` request to `/users` with a body like:
 ```json
 {
 	"name": string,
-	"email": email_string = null,
-	"mobile": string = null,
+	"email": email_string,
 	"password": string,
 }
 ```
-> **NOTE**: One of the two, the _email_ or the _mobile_ must be provided.
 
 The response will be like shown below with a _status code_ of `201`.
 ```json
 {
 	"name": string,
-	"email": email_string = null,
-	"mobile": string = null,
+	"email": email_string,
+	"created_at": time_format(yyyy-mm-dd_hh:mm:ss.msmsms+hh:mm),
+	"id": integer
+}
+```
+
+#### `GET` `/{id}`
+To create a user, send a `GET` request to `/users/{id}` and replace `{id}` by the `id` of the user.
+
+The response will be like shown below with a _status code_ of `200`.
+```json
+{
+	"name": string,
+	"email": email_string,
 	"created_at": time_format(yyyy-mm-dd_hh:mm:ss.msmsms+hh:mm),
 	"id": integer
 }
