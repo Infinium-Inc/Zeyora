@@ -1,7 +1,6 @@
 ## Users
 - create user (POST /users)
 - view user (GET /users/{id})
-- delete user (DELETE /users/{id})
 - update user (PUT /users/{id}) 
 - login user (POST /login) 
 
@@ -19,6 +18,7 @@
 ## Users
 - view users (GET /admin/users) [ADMIN]
 - view user history (GET /admin/users/history) [ADMIN]
+- delete user (DELETE /admin/users/{id}) [ADMIN]
 
 ## Items
 - add item (POST /admin/items) [ADMIN]
