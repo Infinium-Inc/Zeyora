@@ -7,10 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Allow only zeyora.in and localhost (commonly used with React/Vite dev server)
 origins = [
-    "http://localhost:3000",  # Common port for React dev server
-    "http://127.0.0.1:3000",  # Alternative localhost IP
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
 ]
 
 app.add_middleware(
@@ -21,12 +20,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
 app.include_router(users.router)
 
 @app.get("/")
 async def root():
     return "You are connected to the Zeyora backend API!"
 
-# Create DB tables
 models.Base.metadata.create_all(bind=engine)
