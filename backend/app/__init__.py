@@ -9,7 +9,6 @@ app = FastAPI()
 
 # Allow only zeyora.in and localhost (commonly used with React/Vite dev server)
 origins = [
-    "https://zeyora.in",
     "http://localhost:3000",  # Common port for React dev server
     "http://127.0.0.1:3000",  # Alternative localhost IP
 ]
