@@ -40,3 +40,16 @@ async def get_user(id: int, db: Session = Depends(getDB)):
         )
 
     return db_user
+
+@router.delete("/{id}", status_code=204)
+async def delete_user(id: int, db: Session = Depends(getDB)):
+    db_user = db.query(models.User).filter(models.User.id == id).first()
+
+    if db_user is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, 
+            detail="Unextistant User"
+        )
+
+    db.delete(db_user)
+    db.commit()

@@ -1,7 +1,7 @@
 ## Users
 - create user (POST /users) ✅
 - view user (GET /users/{id}) ✅
-- delete user (DELETE /users/{id})
+- delete user (DELETE /users/{id}) ✅
 - update user (PUT /users/{id}) 
 - login user (POST /login) 
 
@@ -17,15 +17,14 @@
 
 # Admin Endpoints
 ## Users
-- view users (GET /admin/users) [ADMIN]
-- view user history (GET /admin/users/history) [ADMIN]
-- delete user (DELETE /admin/users/{id}) [ADMIN]
+- view users (GET /admin/users) **[ADMIN]**
+- view user history (GET /admin/users/history) **[ADMIN]**
 
 ## Items
-- add item (POST /admin/items) [ADMIN]
-- delete item (DELETE /admin/items/{id}) [ADMIN]
-- update item (PUT /admin/items/{id}) [ADMIN]
+- add item (POST /admin/items) **[ADMIN]**
+- delete item (DELETE /admin/items/{id}) **[ADMIN]**
+- update item (PUT /admin/items/{id}) **[ADMIN]**
 
 ## Orders
-- view orders (GET /admin/orders) [ADMIN]
-- update order (PATCH /admin/orders/{id}) [ADMIN]
+- view orders (GET /admin/orders) **[ADMIN]**
+- update order (PATCH /admin/orders/{id}) **[ADMIN]**
