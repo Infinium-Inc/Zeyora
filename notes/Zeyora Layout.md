@@ -36,3 +36,8 @@ The response will be like shown below with a _status code_ of `200`.
 	"id": 123
 }
 ```
+
+#### `DELETE` `/{id}`
+To delete a user, send a `DELETE` request to `/users/{id}` and replace `{id}` by the `id` of the user.
+
+There will be no repsonse with a _status code_ of `204`.
