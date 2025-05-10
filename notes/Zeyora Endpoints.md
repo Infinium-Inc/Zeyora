@@ -1,8 +1,8 @@
 ## Users
 - create user (POST /users) ✅
 - view user (GET /users/{id}) ✅
+- update user (PUT /users/{id}) ✅
 - delete user (DELETE /users/{id}) ✅
-- update user (PUT /users/{id}) 
 - login user (POST /login) 
 
 ## Items
